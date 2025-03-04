@@ -4,11 +4,6 @@ Page({
         items: [],
         inputValue: '',
     },
-    inputChange: function(e) {
-        this.setData({
-            inputValue: e.detail.value || ''
-        });
-    },
     addItem: function (e) {
         const newItem = this.data.inputValue.trim()
         if (!newItem) {

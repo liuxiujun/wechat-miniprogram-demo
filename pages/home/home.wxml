@@ -3,6 +3,6 @@
     <text class="title" wx:for="{{items}}">
         {{index}}. {{item}}
     </text>
-    <input  placeholder="请输入" value="{{inputValue}}" bindinput="inputChange" />
+    <input  placeholder="请输入" model:value="{{inputValue}}" />
     <button bindtap="addItem">添加</button>
 </view>
