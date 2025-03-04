@@ -1,5 +1,6 @@
-<!-- 事件 -->
+<!-- WXML渲染语法 -->
 <view>
-    <text class="title">hello {{name}}</text>
-    <button bindtap="handleClick">点击我</button>
+    <text class="title" wx:for="{{items}}">
+        {{index}}. {{item}}
+    </text>
 </view>
