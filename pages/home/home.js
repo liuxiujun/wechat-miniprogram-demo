@@ -1,8 +1,30 @@
 const app = getApp()
 Page({
     data: {
-        name: '小明',
-        now: app.globalData.now,
-        items: ['事项1', '事项2', '事项3']
+        items: [],
+        inputValue: '',
+    },
+    inputChange: function(e) {
+        this.setData({
+            inputValue: e.detail.value || ''
+        });
+    },
+    addItem: function (e) {
+        const newItem = this.data.inputValue.trim()
+        if (!newItem) {
+            return
+        }
+        const itemArr = [...this.data.items, newItem]
+        wx.setStorageSync('items', itemArr);
+        this.setData({
+            items: itemArr,
+            inputValue: ''
+        });
+    },
+    onLoad: function () {
+        const itemArr = wx.getStorageSync('items') || []
+        this.setData({
+            items: itemArr
+        });
     },
 })

@@ -1,6 +1,8 @@
-<!-- WXML渲染语法 -->
+<!-- 客户端存储 -->
 <view>
     <text class="title" wx:for="{{items}}">
         {{index}}. {{item}}
     </text>
+    <input  placeholder="请输入" value="{{inputValue}}" bindinput="inputChange" />
+    <button bindtap="addItem">添加</button>
 </view>
