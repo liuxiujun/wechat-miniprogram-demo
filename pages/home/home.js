@@ -9,14 +9,27 @@ Page({
     * 事件捕获: 从外到内 
     * 事件冒泡: 从内到外
     */
-    handleClick: function() {
-        this.setData({
-            name: '小红'
-        }, function() {
-            wx.showToast({
-                title: '名字已修改',
-                duration: 700
-            });
+    handleClick: function(event) {
+        const that = this;
+        wx.showModal({
+            title: '提示',
+            content: '确定要修改名字吗?',
+            success: function(res) {
+                if (res.confirm) {
+                    that.setData({
+                        name: '小红'
+                    }, function() {
+                        wx.showToast({
+                            title: '名字修改成功',
+                            icon: 'success',
+                            duration: 2000
+                        });
+                    });
+                } 
+                else if (res.cancel) {
+                    console.log('用户点击取消');
+                }
+            }
         })
     }
 })
