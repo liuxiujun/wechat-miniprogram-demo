@@ -12,6 +12,11 @@ Page({
     handleClick: function() {
         this.setData({
             name: '小红'
+        }, function() {
+            wx.showToast({
+                title: '名字已修改',
+                duration: 700
+            });
         })
     }
 })
