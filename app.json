@@ -1,0 +1,10 @@
+{
+    "pages": [
+        "pages/home/home"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#323239", 
+        "navigationBarTextStyle": "white", 
+        "navigationBarTitleText": "Mini Program" 
+    }
+}

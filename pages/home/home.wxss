@@ -1,0 +1,8 @@
+/* 官方推荐使用flex布局, 只对home生效 */
+page {
+    height: 100%;
+    width: 750rpx; /* 这里的长度是rpx, 而不是px, 腾讯发明的为了适应不同宽度手机, 发明的一种长度单位, 不管什么手机屏幕, 宽度一律750rpx */
+    display: flex;  /* flex布局 */
+    justify-content: center; /* 页面一级子元素view水平居中 */
+    align-items: center;    /* 页面一级子元素view垂直居中 */
+}
