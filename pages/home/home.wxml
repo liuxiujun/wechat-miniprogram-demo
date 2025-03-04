@@ -1,5 +1,5 @@
-<!-- 数据绑定演示 -->
+<!-- 事件 -->
 <view>
-    <!-- <text class="title">Hello {{name}}</text> -->
-    <text class="title">现在是 {{now}}</text>
+    <text class="title">hello {{name}}</text>
+    <button bindtap="handleClick">点击我</button>
 </view>
