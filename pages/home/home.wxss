@@ -6,7 +6,3 @@ page {
     justify-content: center; /* 页面一级子元素view水平居中 */
     align-items: center;    /* 页面一级子元素view垂直居中 */
 }
-
-image {
-    width: 750rpx;
-}
