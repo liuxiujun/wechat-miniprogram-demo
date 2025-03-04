@@ -1,3 +1,11 @@
 <view>
-    <text class="title">Hello World</text>
+    <button class="weui-btn weui-btn_primary">
+        主操作
+    </button>
+    <button class="weui-btn weui-btn_primary weui-btn_loading">
+        <i class="weui-loading"></i>加载中
+    </button>
+    <button class="weui-btn weui-btn_primary weui-btn_disabled">
+        禁用状态
+    </button>
 </view>
