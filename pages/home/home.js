@@ -4,22 +4,15 @@ Page({
         items: [],
         inputValue: '',
     },
-    addItem: function (e) {
-        const newItem = this.data.inputValue.trim()
-        if (!newItem) {
-            return
-        }
-        const itemArr = [...this.data.items, newItem]
-        wx.setStorageSync('items', itemArr);
-        this.setData({
-            items: itemArr,
-            inputValue: ''
-        });
-    },
     onLoad: function () {
-        const itemArr = wx.getStorageSync('items') || []
-        this.setData({
-            items: itemArr
-        });
+        const that = this;
+        wx.request({
+            url: 'http://localhost:8000/items',
+            success: function (res) {
+                that.setData({
+                    items: res.data.items
+                })
+            }   
+        })
     },
 })
