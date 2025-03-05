@@ -1,25 +1,12 @@
-const app = getApp()
+const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
 Page({
     data: {
-        userInfo: {},
+        avatarUrl: defaultAvatarUrl,
     },
-    getUserInfo: function (e) {
-        if (!e.detail.userInfo) {
-            return;
-        }
-        this.setData({  
-            userInfo: e.detail.userInfo
+    onChooseAvatar(e) {
+        const { avatarUrl } = e.detail
+        this.setData({
+            avatarUrl,
         })
-    },
-    onLoad: function () {
-        const that = this;
-        wx.request({
-            url: 'http://localhost:8000/items',
-            success: function (res) {
-                that.setData({
-                    items: res.data.items
-                })
-            }   
-        })
-    },
+    }
 })
