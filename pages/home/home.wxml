@@ -1,8 +1,5 @@
-<!-- 客户端存储 -->
+<!-- open-data展示个人信息的能力在2022年被回收了 -->
 <view>
-    <text class="title" wx:for="{{items}}">
-        {{index}}. {{item}}
-    </text>
-    <input  placeholder="请输入" model:value="{{inputValue}}" />
-    <button bindtap="addItem">添加</button>
+    <open-data type="userAvatarUrl"></open-data>
+    <open-data type="userNickName"></open-data>
 </view>
