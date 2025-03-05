@@ -1,8 +1,15 @@
 const app = getApp()
 Page({
     data: {
-        items: [],
-        inputValue: '',
+        userInfo: {},
+    },
+    getUserInfo: function (e) {
+        if (!e.detail.userInfo) {
+            return;
+        }
+        this.setData({  
+            userInfo: e.detail.userInfo
+        })
     },
     onLoad: function () {
         const that = this;

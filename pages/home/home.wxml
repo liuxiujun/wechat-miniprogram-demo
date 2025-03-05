@@ -1,5 +1,5 @@
-<!-- open-data展示个人信息的能力在2022年被回收了 -->
+<!-- getUserInfo, getUserProfile接口也弃用了 -->
 <view>
-    <open-data type="userAvatarUrl"></open-data>
-    <open-data type="userNickName"></open-data>
+    <text class="title">hello {{userInfo.nickName}} </text>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权获取用户信息</button>
 </view>
