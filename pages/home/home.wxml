@@ -1,12 +1,5 @@
-<!-- 只剩下头像昵称填写功能了 -->
+<!-- 多页面的跳转 -->
 <view>
-    <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-        <image class="avatar" src="{{avatarUrl}}"></image>
-    </button>
-    <form catchsubmit="onSubmit">
-        <view class="row">
-            <input type="nickname" class="input weui-input" placeholder="请输入昵称" />
-        </view>
-        <button type="primary" class="submit-btn" form-type="submit">提交</button>
-    </form>
+    <text class="title">这是首页</text>
+    <navigator url="/pages/second/second">Go to Second Page</navigator>
 </view>

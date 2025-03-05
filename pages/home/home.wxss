@@ -11,6 +11,11 @@ page {
     /* 页面一级子元素view垂直居中 */
 }
 
+.title {
+    font-size: 24pt;
+    color: #000;
+}
+
 .avatar-wrapper {
     padding: 0;
     width: 56px !important;
