@@ -3,10 +3,9 @@ Page({
     data: {
         avatarUrl: defaultAvatarUrl,
     },
-    onChooseAvatar(e) {
-        const { avatarUrl } = e.detail
-        this.setData({
-            avatarUrl,
+    goToSecondPage() {
+        wx.navigateTo({
+            url: '/pages/second/second',
         })
     }
 })

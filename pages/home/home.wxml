@@ -1,5 +1,6 @@
 <!-- 多页面的跳转 -->
 <view>
     <text class="title">这是首页</text>
-    <navigator url="/pages/second/second">Go to Second Page</navigator>
+    <!-- <navigator url="/pages/second/second">Go to Second Page</navigator> -->
+     <button bind:tap="goToSecondPage">Go to Second Page</button>
 </view>

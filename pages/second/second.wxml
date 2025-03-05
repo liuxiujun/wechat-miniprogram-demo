@@ -1,4 +1,5 @@
 <view>
     <text class="title">这是第二页</text>
-    <navigator url="/pages/home/home">Go to Home Page</navigator>
+    <!-- <navigator url="/pages/home/home">Go to Home Page</navigator> -->
+     <button bind:tap="goToHomePage">Go to Home Page</button>
 </view>
